@@ -14,30 +14,29 @@
  * limitations under the License.
  */
 
-package com.fiction.fictionai.demos.web;
+package com.fiction.fictionai.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 /**
  * @author <a href="mailto:chenxilzx1@gmail.com">theonefx</a>
  */
-public class User {
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class User implements Serializable {
 
-    private String name;
+    private String id;
 
-    private Integer age;
+    private String email;
 
-    public String getName() {
-        return name;
-    }
+    private String createdAt;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    private String updatedAt;
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
+    private String password;
 }
